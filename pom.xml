@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.4</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>com.onbuka.api</groupId>
+    <artifactId>buka-java-sdk</artifactId>
+    <version>1.0.0</version>
+    <name>buka-java-sdk</name>
+    <description>buka-java-sdk</description>
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <build>
+        <plugins>
+            <!-- 要排除启动类 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source> <!--指明源码用的Jdk版本-->
+                    <target>1.8</target> <!--指明打包后的Jdk版本-->
+                    <skip>true</skip>
+                    <!-- 如果发现依然排除不了，考虑先clean再install-->
+                    <excludes>
+                        <exclude>
+                            com/example/bukasmssdkdemo/BukaSmsSdkDemoApplication.java
+                        </exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+
+            <!--将本附加模块的独有依赖和自身打成一个FatJar-->
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <!-- 启动类没有可以不用 -->
+                    <!--                    <archive>-->
+                    <!--                        <manifest>-->
+                    <!--                            <mainClass>util.DataSourceCreator</mainClass>-->
+                    <!--                        </manifest>-->
+                    <!--                    </archive>-->
+                    <!-- Maven预先定义好的描述符有bin，src，project，jar-with-dependencies等。比较常用的是jar-with-dependencies，它是将所有外部依赖JAR都加入生成的JAR包中，比较傻瓜化。-->
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <!-- 绑定到package生命周期 -->
+                        <phase>package</phase>
+
+                        <goals>
+                            <!-- 只运行一次 -->
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+        </plugins>
+    </build>
+
+</project>
+

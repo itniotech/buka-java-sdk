@@ -8,5 +8,5 @@
 - **[AIVOICE-SDK](https://github.com/itniotech/buka-java-sdk/wiki/AIVOICE-SDK)**: ai voice-related functional modules
 
 >Acquisition method:
-Provide jar package download, which can be directly imported into your project Use [jar package download address (click here)](http://dev-data2022.s3-accelerate.amazonaws.com/download/buka-java-sdk-1.0.0.jar)
+Provide jar package download, which can be directly imported into your project Use [jar package download address (click here)](https://github.com/itniotech/buka-java-sdk/releases)
 

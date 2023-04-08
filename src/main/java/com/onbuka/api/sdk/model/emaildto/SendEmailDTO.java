@@ -44,6 +44,9 @@ public class SendEmailDTO {
      */
     private Integer adFlag;
 
+    private String language;
+
+
     public String getAppId() {
         return appId;
     }
@@ -98,5 +101,13 @@ public class SendEmailDTO {
 
     public void setAdFlag(Integer adFlag) {
         this.adFlag = adFlag;
+    }
+
+    public String getLanguage() {
+        return language;
+    }
+
+    public void setLanguage(String language) {
+        this.language = language;
     }
 }

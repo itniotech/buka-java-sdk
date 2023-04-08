@@ -12,7 +12,7 @@ public class ReportTimeDTO {
     private String appId;
     private String startTime;
     private String endTime;
-    private Integer startIndex;
+    private Integer startIndex = 0;
 
     public String getAppId() {
         return appId;

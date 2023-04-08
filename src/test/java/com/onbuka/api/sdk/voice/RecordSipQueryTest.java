@@ -21,7 +21,7 @@ public class RecordSipQueryTest {
         queryDTO.setCurrent(1);
         queryDTO.setSize(1);
         Map params = new HashMap<>();
-        params.put("startTime","startTime");
+        params.put("strTime","startTime");
         params.put("endTime","endTime");
         params.put("groupName","groupName");
         params.put("phoneName","phoneName");

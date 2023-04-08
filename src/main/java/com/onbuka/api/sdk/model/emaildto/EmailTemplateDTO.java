@@ -5,6 +5,7 @@ public class EmailTemplateDTO {
     private String appId;
     private String templateName;
     private Integer templateStatus;
+    private String language;
 
     public String getAppId() {
         return appId;
@@ -28,5 +29,13 @@ public class EmailTemplateDTO {
 
     public void setTemplateStatus(Integer templateStatus) {
         this.templateStatus = templateStatus;
+    }
+
+    public String getLanguage() {
+        return language;
+    }
+
+    public void setLanguage(String language) {
+        this.language = language;
     }
 }

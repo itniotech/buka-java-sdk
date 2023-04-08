@@ -35,7 +35,7 @@ public class TaskFlowUpdateTest {
           flowDTO1.setChannel("channel");
           flowDTO1.setWaitingTime(123456789);
           flowDTOList.add(flowDTO1);
-          taskFlowDTO.setFlowDTOList(flowDTOList);
+          taskFlowDTO.setFlow(flowDTOList);
 
           String result = otpSdkClient.flowUpdate(taskFlowDTO);
      }

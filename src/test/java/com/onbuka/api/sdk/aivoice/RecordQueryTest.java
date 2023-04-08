@@ -26,10 +26,11 @@ public class RecordQueryTest {
         taskQueryDTO.setCurrent(1);
         taskQueryDTO.setSize(15);
         Map params = new HashMap<>();
-        params.put("appId","appId");
-        params.put("startTime","startTime");
-        params.put("endTime","endTime");
+        params.put("appId","appid");
+        params.put("startTime","2022-01-01 00:00:00");
+        params.put("endTime","2022-01-31 00:00:00");
         taskQueryDTO.setParams(params);
         String result = aiVoiceSdkClient.recordQuery(taskQueryDTO);
+        System.out.printf(result);
     }
 }

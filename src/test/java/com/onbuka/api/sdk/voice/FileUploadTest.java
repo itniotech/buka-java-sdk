@@ -5,6 +5,8 @@ import com.onbuka.api.sdk.model.ApiData;
 import com.onbuka.api.sdk.model.voicedto.FileUploadDTO;
 import com.onbuka.api.sdk.model.voicedto.SipResetDTO;
 
+import java.io.File;
+
 /**
  * @author rch
  * @version 1.0.0
@@ -16,8 +18,9 @@ public class FileUploadTest {
         ApiData apiData = new ApiData("key","secret");
         VoiceSdkClient voiceSdkClient = VoiceSdkClient.getInstance(apiData);
         FileUploadDTO fileUploadDTO = new FileUploadDTO();
-        fileUploadDTO.setFileName("fineName");
-        fileUploadDTO.setFile("file");
+        fileUploadDTO.setFileName("test.mp3");
+        fileUploadDTO.setOriginalFile(new File("D:\\11582.mp3"));
         String result =  voiceSdkClient.fileUpload(fileUploadDTO);
+        System.out.printf(result);
     }
 }

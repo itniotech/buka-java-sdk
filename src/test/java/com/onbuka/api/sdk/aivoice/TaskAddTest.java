@@ -23,6 +23,7 @@ public class TaskAddTest {
         outboundTaskDTO.setAppId("appId");
         outboundTaskDTO.setName("name");
         outboundTaskDTO.setDialogFlowId(1);
+        outboundTaskDTO.setMode("MANUAL");
         outboundTaskDTO.setStartDateTime("startDateTime");
         outboundTaskDTO.setEndDateTime("endDateTime");
         outboundTaskDTO.setDailyStartDateTime("dailyStartDateTime");

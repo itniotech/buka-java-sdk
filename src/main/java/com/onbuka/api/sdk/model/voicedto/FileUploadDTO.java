@@ -1,5 +1,10 @@
 package com.onbuka.api.sdk.model.voicedto;
 
+import com.onbuka.api.sdk.utils.DataUtil;
+
+import java.io.File;
+import java.util.Base64;
+
 /**
  * @author rch
  * @version 1.0.0
@@ -18,6 +23,7 @@ public class FileUploadDTO {
      */
     private String file;
 
+    private File originalFile;
 
     public String getFileName() {
         return fileName;
@@ -28,10 +34,36 @@ public class FileUploadDTO {
     }
 
     public String getFile() {
+        if (null != getOriginalFile() || 0 == getOriginalFile().length()){
+            this.file = DataUtil.file2Base64(getOriginalFile());
+        }
         return file;
     }
 
     public void setFile(String file) {
         this.file = file;
+    }
+
+    public File getOriginalFile() {
+        return originalFile;
+    }
+
+    public void setOriginalFile(File originalFile) {
+        this.originalFile = originalFile;
+    }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "\"fileName\":\"" + fileName + '\"' +
+                ", \"file\":\"" + getFile() + '\"' +
+                '}';
+    }
+
+    public static void main(String[] args) {
+        FileUploadDTO fileUploadDTO = new FileUploadDTO();
+        fileUploadDTO.setFileName("test");
+        fileUploadDTO.setOriginalFile(new File("D:\\11582.mp3"));
+        System.out.printf(fileUploadDTO.toString());
     }
 }

@@ -24,6 +24,7 @@ public class TaskEditTest {
         outboundTaskDTO.setJobId(123L);
         outboundTaskDTO.setName("name");
         outboundTaskDTO.setDialogFlowId(1);
+        outboundTaskDTO.setMode("AUTO");
         outboundTaskDTO.setStartDateTime("startDateTime");
         outboundTaskDTO.setEndDateTime("endDateTime");
         outboundTaskDTO.setDailyStartDateTime("dailyStartDateTime");

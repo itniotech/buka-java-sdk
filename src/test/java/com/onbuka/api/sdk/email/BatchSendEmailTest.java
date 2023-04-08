@@ -21,7 +21,10 @@ public class BatchSendEmailTest {
         batchSendEmailDTO.setReceiverId("receiverId");
         batchSendEmailDTO.setSubject("subject");
         batchSendEmailDTO.setTemplateID("tempId");
+        batchSendEmailDTO.setUrl("backUrl");
         batchSendEmailDTO.setAdFlag(1);
+        batchSendEmailDTO.setTriggerID(123);
+        batchSendEmailDTO.setLanguage("en");
         String result = emailSdkClient.batchSendEmail(batchSendEmailDTO);
 
 

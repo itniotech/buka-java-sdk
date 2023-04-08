@@ -82,7 +82,7 @@ public class VoiceSdkClient implements DefaultSdk{
      */
     public String fileUpload(FileUploadDTO fileUploadDTO) {
         final String url = DataUtil.getApi(httpUtil.getBaseUrl(), ApiEnums.FILEUPLOAD);
-        return DataUtil.getResultData(httpUtil.doPost(url, JsonUtil.toJson(fileUploadDTO)));
+        return DataUtil.getResultData(httpUtil.doPost(url, fileUploadDTO.toString()));
     }
 
 

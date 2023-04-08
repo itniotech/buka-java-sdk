@@ -19,6 +19,7 @@ public class GetListEmailTemplatesTest {
         emailTemplateDTO.setAppId("appId");
         emailTemplateDTO.setTemplateName("templateName");
         emailTemplateDTO.setTemplateStatus(1);
+        emailTemplateDTO.setLanguage("en");
         String result = emailSdkClient.getListEmailTemplates(emailTemplateDTO);
 
 

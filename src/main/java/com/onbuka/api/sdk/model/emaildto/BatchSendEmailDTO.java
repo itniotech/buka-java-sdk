@@ -44,6 +44,10 @@ public class BatchSendEmailDTO {
      */
     private Integer adFlag;
 
+    private String language;
+
+    private Integer triggerID;
+
     public String getAppId() {
         return appId;
     }
@@ -98,5 +102,21 @@ public class BatchSendEmailDTO {
 
     public void setAdFlag(Integer adFlag) {
         this.adFlag = adFlag;
+    }
+
+    public String getLanguage() {
+        return language;
+    }
+
+    public void setLanguage(String language) {
+        this.language = language;
+    }
+
+    public Integer getTriggerID() {
+        return triggerID;
+    }
+
+    public void setTriggerID(Integer triggerID) {
+        this.triggerID = triggerID;
     }
 }

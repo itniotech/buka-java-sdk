@@ -22,6 +22,7 @@ public class SendEmailTest {
         sendEmailDTO.setTemplateID("tempId");
         sendEmailDTO.setTemplateData("tempData");
         sendEmailDTO.setAdFlag(1);
+        sendEmailDTO.setLanguage("en");
         String result = emailSdkClient.sendEmail(sendEmailDTO);
 
 

@@ -23,6 +23,7 @@ public class TaskNoCallListTest {
         Map params = new HashMap<>();
         params.put("appId","appId");
         params.put("taskStatus","CAN_NOT_START");
+        params.put("jobId","jobId");
         taskQueryDTO.setParams(params);
         String result = aiVoiceSdkClient.taskNoCall(taskQueryDTO);
     }

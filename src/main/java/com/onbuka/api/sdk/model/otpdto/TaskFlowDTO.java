@@ -12,7 +12,7 @@ public class TaskFlowDTO {
 
     private String flowId;
     private String name;
-    private List<FlowDTO> flowDTOList;
+    private List<FlowDTO> flow;
 
     public String getFlowId() {
         return flowId;
@@ -30,11 +30,11 @@ public class TaskFlowDTO {
         this.name = name;
     }
 
-    public List<FlowDTO> getFlowDTOList() {
-        return flowDTOList;
+    public List<FlowDTO> getFlow() {
+        return flow;
     }
 
-    public void setFlowDTOList(List<FlowDTO> flowDTOList) {
-        this.flowDTOList = flowDTOList;
+    public void setFlow(List<FlowDTO> flow) {
+        this.flow = flow;
     }
 }

@@ -18,7 +18,7 @@ public class TaskFlowAddTest {
           ApiData apiData = new ApiData("5RRQlcSG","G7dFKhVy");
           OtpSdkClient otpSdkClient = OtpSdkClient.getInstance(apiData);
           TaskFlowDTO taskFlowDTO = new TaskFlowDTO();
-          List<FlowDTO> flowDTOList = new ArrayList<>();
+          List<FlowDTO> flow = new ArrayList<>();
           taskFlowDTO.setName("test task flow");
 
           FlowDTO flowDTO = new FlowDTO();
@@ -26,15 +26,15 @@ public class TaskFlowAddTest {
           flowDTO.setChannelCut(1);
           flowDTO.setChannel("channel");
           flowDTO.setWaitingTime(123456789);
-          flowDTOList.add(flowDTO);
+          flow.add(flowDTO);
 
           FlowDTO flowDTO1 = new FlowDTO();
           flowDTO1.setStatus(1);
           flowDTO1.setChannelCut(1);
           flowDTO1.setChannel("channel");
           flowDTO1.setWaitingTime(123456789);
-          flowDTOList.add(flowDTO1);
-          taskFlowDTO.setFlowDTOList(flowDTOList);
+          flow.add(flowDTO1);
+          taskFlowDTO.setFlow(flow);
           String result = otpSdkClient.flowAdd(taskFlowDTO);
      }
 

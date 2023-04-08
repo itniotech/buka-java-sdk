@@ -4,6 +4,12 @@ import com.onbuka.api.sdk.enums.ApiEnums;
 import com.onbuka.api.sdk.enums.SdkCodeEnums;
 import com.onbuka.api.sdk.resp.Resp;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Base64;
+
 /**
  * @author rch
  * @version 1.0.0
@@ -42,6 +48,33 @@ public class DataUtil {
             url = url.concat(str);
         }
         return url;
+    }
+
+    public static String file2Base64(File file) {
+        if(file == null) {
+            return null;
+        }
+        String base64 = null;
+        FileInputStream fin = null;
+        try {
+            fin = new FileInputStream(file);
+            byte[] buff = new byte[fin.available()];
+            fin.read(buff);
+            base64 = Base64.getEncoder().encodeToString(buff);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if(fin != null) {
+                try {
+                    fin.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return base64;
     }
 
 }

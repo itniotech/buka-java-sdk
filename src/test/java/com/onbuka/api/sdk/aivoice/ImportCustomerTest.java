@@ -27,6 +27,7 @@ public class ImportCustomerTest {
         List<CustomerPersonDTO> customerPersonDTOList = new ArrayList<>();
         CustomerPersonDTO customerPersonDTO = new CustomerPersonDTO();
         customerPersonDTO.setName("name");
+        customerPersonDTO.setPhoneNumber("phone");
         customerPersonDTO.setGender("gender");
         Map propertiesMap = new HashMap<>();
         propertiesMap.put("income","10");

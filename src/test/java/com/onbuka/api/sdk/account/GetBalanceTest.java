@@ -14,7 +14,6 @@ public class GetBalanceTest {
           ApiData apiData = new ApiData("key","secret");
           AccountSdkClient accountSdkClient = AccountSdkClient.getInstance(apiData);
           String result = accountSdkClient.getbalanceV3();
-          System.out.println(result);
      }
 
 

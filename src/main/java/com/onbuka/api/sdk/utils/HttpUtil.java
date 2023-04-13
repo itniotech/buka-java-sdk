@@ -208,7 +208,7 @@ public class HttpUtil {
                     while (null != (temp = br.readLine())) {
                         result.append(temp);
                         result.append("\r\n");
-                        System.out.printf(temp);
+                        System.out.println(temp);
                     }
                 }
             }else{

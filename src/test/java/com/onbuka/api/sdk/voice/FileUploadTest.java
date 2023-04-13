@@ -21,6 +21,5 @@ public class FileUploadTest {
         fileUploadDTO.setFileName("test.mp3");
         fileUploadDTO.setOriginalFile(new File("D:\\11582.mp3"));
         String result =  voiceSdkClient.fileUpload(fileUploadDTO);
-        System.out.printf(result);
     }
 }

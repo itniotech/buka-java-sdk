@@ -31,6 +31,5 @@ public class RecordQueryTest {
         params.put("endTime","2022-01-31 00:00:00");
         taskQueryDTO.setParams(params);
         String result = aiVoiceSdkClient.recordQuery(taskQueryDTO);
-        System.out.printf(result);
     }
 }

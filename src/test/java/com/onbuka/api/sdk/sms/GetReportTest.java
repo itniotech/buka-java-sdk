@@ -17,8 +17,6 @@ public class GetReportTest {
           reportDTO.setAppId("appId");
           reportDTO.setMsgIds("123,456");
           String result = smsSdkClient.getReport(reportDTO);
-          System.out.println(result);
-
      }
 
 
